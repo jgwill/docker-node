@@ -1,12 +1,13 @@
 {
   "name": "jgwill-docker-node-patternlab-demo-handlebar",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "* jgwill/node - PatternLab Handlebar container runner",
   "main": "index.js",
   "scripts": {
     "setup": "docker pull docker.io/jgwill/node:patternlab-demo-handlebar",
     "start": "docker run -it --rm -p 3000:3000 docker.io/jgwill/node:patternlab-demo-handlebar",
-    "postinstall":"echo \"-----------------------\";cd node_modules/jgwill-docker-node-patternlab-demo-handlebar &&    npm start"
+    "postinstall":"cat node_modules/jgwill-docker-node-patternlab-demo-handlebar/RUN_INFO.txt",
+    "postinstall-old":"echo \"-----------------------\n\";cd node_modules/jgwill-docker-node-patternlab-demo-handlebar &&    npm start"
   },
   "repository": {
     "type": "git",

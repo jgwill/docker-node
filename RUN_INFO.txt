@@ -1,0 +1,8 @@
+-----------------------------
+- To run: 
+
+cd node_modules/jgwill-docker-node-patternlab-demo-handlebar     
+
+npm start
+
+-------------------------------
