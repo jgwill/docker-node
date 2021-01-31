@@ -4,7 +4,7 @@
   "description": "* jgwill/node",
   "main": "index.js",
   "scripts": {
-    "setup": "docker pull docker.io/jgwill/node:patternlab-demo-handlebar",
+    "setup": "docker pull docker.io/jgwill/node:patternlab",
     "start": "docker run -it --rm -p 3000:3000 docker.io/jgwill/node:patternlab"
   },
   "repository": {
