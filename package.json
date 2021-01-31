@@ -1,7 +1,7 @@
 {
   "name": "jgwill-docker-node-patternlab-demo-handlebar",
-  "version": "1.0.0",
-  "description": "* jgwill/node",
+  "version": "1.0.1",
+  "description": "* jgwill/node - PatternLab Handlebar container runner",
   "main": "index.js",
   "scripts": {
     "setup": "docker pull docker.io/jgwill/node:patternlab-demo-handlebar",
@@ -11,9 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/jgwill/docker-node.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["node","patternlab"],
+  "author": "Guillaume Descoteaux-Isabelle",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jgwill/docker-node/issues"
   },
