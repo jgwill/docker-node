@@ -1,0 +1,21 @@
+{
+  "name": "jgwill-docker-node",
+  "version": "1.0.0",
+  "description": "* jgwill/node",
+  "main": "index.js",
+  "scripts": {
+    "setup": "docker pull docker.io/jgwill/node:patternlab-demo-handlebar",
+    "start": "docker run -it --rm -p 3000:3000 docker.io/jgwill/node:patternlab"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgwill/docker-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgwill/docker-node/issues"
+  },
+  "homepage": "https://github.com/jgwill/docker-node#readme"
+}
