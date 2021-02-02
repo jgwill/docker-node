@@ -3,6 +3,12 @@
 * jgwill/node:patternlab with Handlebar Demo
 * Running the infrastructure easiely with the demo
 
+# Install
+
+```sh
+npm i jgwill-docker-node-patternlab-demo-handlebar
+```
+
 # Execute
 
 ```sh
