@@ -21,5 +21,10 @@ RUN apt install -y nodejs
 RUN apt install build-essential -y
 ENV JGWILLNODEGLOBALINSTALLSCRIPT=https://gist.githubusercontent.com/jgwill/7e68015d9c2e85d97ca6e6e13e7d1591/raw/2cc4013b34f47154389d899c1d3a9fc7e0feb8d9/jgwill-docker-node-210131-install.sh
 
-RUN curl -sL $JGWILLNODEGLOBALINSTALLSCRIPT | bash -
+#RUN curl -sL $JGWILLNODEGLOBALINSTALLSCRIPT | bash -
+RUN apt update && apt upgrade -y
+RUN npm i node-gyp --g
+RUN npm i yarn --g
+RUN npm i http-server --g
 
+RUN apt clean

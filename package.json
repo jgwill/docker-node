@@ -1,6 +1,6 @@
 {
   "name": "jgwill-docker-node",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "* jgwill/node",
   "main": "index.js",
   "scripts": {
@@ -12,8 +12,8 @@
     "url": "git+https://github.com/jgwill/docker-node.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "GUillaume Descoteaux-Isabelle",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/jgwill/docker-node/issues"
   },
