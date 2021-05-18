@@ -1,4 +1,4 @@
-FROM jgwill/ubuntu
+FROM jgwill/ubuntu:2105
 
 RUN apt update && apt upgrade -y
 
@@ -8,11 +8,11 @@ RUN apt update && apt upgrade -y
 # Install NodeJS
 #RUN curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 
-RUN curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+RUN curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 
 RUN apt install -y nodejs
 
-
+RUN npm i npm --g
 # Node Installed
 
 ## Installing might be useful for package (make the container ready for working with many package)
