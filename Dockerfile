@@ -22,20 +22,20 @@ ENV JGWILLNODEGLOBALINSTALLSCRIPT=https://gist.githubusercontent.com/jgwill/7e68
 
 #RUN curl -sL $JGWILLNODEGLOBALINSTALLSCRIPT | bash -
 #RUN apt update && apt upgrade -y
-RUN npm i node-gyp --g
-RUN npm i yarn --g
-RUN npm i http-server --g
 
-RUN npm i npm --g
-RUN npm i gia-ast-util --g
-RUN npm i droxul --g
+RUN npm i yarn --g
+RUN yarn add node-gyp -g
+RUN yarn add http-server -g
+
+RUN yarn add gia-ast-util -g
+RUN yarn add droxul -g
 
 ARG DEBIAN_FRONTEND=noninteractive 
 
 RUN apt install exiftool -y
 
 #RUN apt install gyp -y
-RUN apt update && apt upgrade -y
+#RUN apt update && apt upgrade -y
 RUN apt autoremove -y
 
 
