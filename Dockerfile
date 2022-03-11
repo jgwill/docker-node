@@ -27,5 +27,6 @@ RUN npm i node-gyp --g
 RUN npm i yarn --g
 RUN npm i http-server --g
 RUN npm i tlid --g
+RUN npm install typescript --g
 
 RUN apt clean
