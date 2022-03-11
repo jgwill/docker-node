@@ -28,5 +28,6 @@ RUN npm i yarn --g
 RUN npm i http-server --g
 RUN npm i tlid --g
 RUN npm install typescript --g
-
+RUN npm install firebase --g
+RUN curl -sL https://firebase.tools | bash
 RUN apt clean
