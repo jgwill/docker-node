@@ -30,4 +30,7 @@ RUN npm i tlid --g
 RUN npm install typescript --g
 RUN npm install firebase --g
 RUN curl -sL https://firebase.tools | bash
+RUN npm install electron --g
+RUN npm -g i eslint-cli
+
 RUN apt clean
