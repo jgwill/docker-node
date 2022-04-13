@@ -2,8 +2,10 @@
 #v16.14.0
 FROM jgwill/node:16.14.0
 
-
-RUN npm install -g @angular/cli
+RUN apt update && apt upgrade -y && apt clean
+RUN npm install -g yarn
+RUN yarn global add @angular/cli
+RUN yarn global add tlid json2bash
 
 RUN ng config -g cli.packageManager yarn
 
@@ -25,8 +27,13 @@ RUN npm init --y && \
 
 WORKDIR /app
 
-RUN git config --global user.email "jgi@jgwill.com"
-RUN git config --global user.name "JGI"
-
+#RUN git config --global user.email "jgi@jgwill.com"
+#RUN git config --global user.name "JGI"
+#ENV TZ="America/New_York"
+#RUN apt install tzdata -y
+#RUN mkdir -p /config/etc && mv /etc/timezone /config/etc/ && ln -s /config/etc/timezone /etc/
+#RUN echo "America/New_York"  > /etc/timezone
+#RUN dpkg-reconfigure -f noninteractive tzdata
+#CP /etc/timezone /etc/timezone
 
 RUN apt clean
