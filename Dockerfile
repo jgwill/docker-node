@@ -28,5 +28,6 @@ RUN npm i yarn --g
 RUN npm i http-server --g
 RUN npm i tlid --g
 RUN npm install typescript --g
+RUN npm install npm --g
 
 RUN apt clean
