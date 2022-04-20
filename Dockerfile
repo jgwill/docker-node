@@ -12,7 +12,18 @@ RUN apt update && \
 
 
 
-RUN npm install -g npm
+#RUN npm install -g npm
+#RUN npm i yarn --g
+RUN npm install npm yarn --g
+#RUN yarn global add \
+#	node-gyp \
+#	http-server \
+#	tlid \
+#	json2bash \
+#	typescript \
+#	create-pattern-lab \
+#	--prefix /usr/local
+
 RUN npm i node-gyp --g
 RUN npm i yarn --g
 RUN npm i http-server --g
