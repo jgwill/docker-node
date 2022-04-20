@@ -1,8 +1,8 @@
 #FROM jgwill/node:14.16.1
 #v16.14.0
-FROM jgwill/node:16.14.0
+FROM jgwill/node:16.14.2
 
-RUN apt update && apt upgrade -y && apt clean
+RUN apt update && apt upgrade -y && apt clean  && rm -rf /var/lib/apt/lists/*
 RUN npm install -g yarn
 RUN yarn global add @angular/cli
 RUN yarn global add tlid json2bash

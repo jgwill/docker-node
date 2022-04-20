@@ -5,3 +5,4 @@ containername=nodeangular
 
 #dkecho=true
 
+dkbuildmorerun="RUN ng config --global cli.packageManager yarn"
