@@ -1,3 +1,6 @@
+**/Dockerfile.bk*
+**/_bak
+
 # Logs
 logs
 *.log
