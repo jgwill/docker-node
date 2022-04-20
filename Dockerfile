@@ -1,39 +1,36 @@
-FROM jgwill/ubuntu:latest
+FROM jgwill/node:14.19.1
 
-RUN apt update && \
- 	apt upgrade -y && \
-	curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - && \
-	apt install -y nodejs && \
-	apt install build-essential -y && \
-	apt clean && \
-	rm -rf /var/lib/apt/lists/*
+RUN yarn global add @angular/cli
+RUN yarn global add tlid json2bash
+RUN yarn global add firebase-tools
 
+RUN ng config -g cli.packageManager yarn
 
+WORKDIR /tmpinstall
+RUN npm init --y && \
+	yarn add @angular/material @angular/cdk  && \
+	yarn add @angular/animations && \
+	yarn add hammerjs && \
+	ng new my-first-project \
+		--routing=true \
+		--verbose=true \
+		--packageManager=yarn \
+		--defaults=true \
+		--commit=false \
+		--style=scss && \
+	rm -rf my-first-project && \
+	rm -rf node_modules && ls
+# That should have created our yarn local cache to speed up prototyping
 
+WORKDIR /app
 
-
-#RUN npm install -g npm
-#RUN npm i yarn --g
-RUN npm install npm --g 
-RUN npm install yarn --g
-#RUN yarn global add \
-#	node-gyp \
-#	http-server \
-#	tlid \
-#	json2bash \
-#	typescript \
-#	create-pattern-lab \
-#	--prefix /usr/local
-
-RUN npm i node-gyp --g
-RUN npm i yarn --g
-RUN npm i http-server --g
-RUN npm i tlid --g
-RUN npm i json2bash --g
-RUN npm install typescript --g
-RUN npm i create-pattern-lab --g
-
-#RUN npm install npm --g
-
+#RUN git config --global user.email "jgi@jgwill.com"
+#RUN git config --global user.name "JGI"
+#ENV TZ="America/New_York"
+#RUN apt install tzdata -y
+#RUN mkdir -p /config/etc && mv /etc/timezone /config/etc/ && ln -s /config/etc/timezone /etc/
+#RUN echo "America/New_York"  > /etc/timezone
+#RUN dpkg-reconfigure -f noninteractive tzdata
+#CP /etc/timezone /etc/timezone
 
 RUN apt clean
