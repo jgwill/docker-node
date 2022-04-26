@@ -1,4 +1,4 @@
-FROM jgwill/ubuntu:latest
+FROM jgwill/ubuntu:20.04
 
 RUN apt update && \
  	apt upgrade -y && \
