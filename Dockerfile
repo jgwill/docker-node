@@ -1,6 +1,7 @@
 #FROM jgwill/node:14.16.1
 #v16.14.0
-FROM jgwill/node:16.14.2
+#FROM jgwill/node:16.14.2
+FROM jgwill/node:16.15 
 
 RUN apt update && apt upgrade -y && apt clean  && rm -rf /var/lib/apt/lists/*
 RUN npm install -g yarn
@@ -35,7 +36,6 @@ WORKDIR /app
 #RUN echo "America/New_York"  > /etc/timezone
 #RUN dpkg-reconfigure -f noninteractive tzdata
 #CP /etc/timezone /etc/timezone
-RUN apt update
-RUN apt install ffmpeg -y
+
 
 RUN apt clean
