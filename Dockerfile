@@ -31,7 +31,7 @@ RUN npm i tlid --g
 RUN npm i json2bash --g
 RUN npm install typescript --g
 RUN npm i create-pattern-lab --g
-
+RUN npm i thumbsup --g
 #RUN npm install npm --g
 
 
