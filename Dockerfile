@@ -35,5 +35,7 @@ WORKDIR /app
 #RUN echo "America/New_York"  > /etc/timezone
 #RUN dpkg-reconfigure -f noninteractive tzdata
 #CP /etc/timezone /etc/timezone
+RUN apt update
+RUN apt install ffmpeg -y
 
 RUN apt clean
