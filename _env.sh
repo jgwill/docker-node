@@ -1,4 +1,4 @@
-export containertag="jgwill/node:16.15"
+export containertag="jgwill/node:16.20.2"
 export dockertag="$containertag"
 export containername="tstjgwillnode1615x"
 
@@ -7,3 +7,5 @@ export containername="tstjgwillnode1615x"
 dkhostname="$containername"
 
 dkcommand=bash #command to execute
+
+unset DOCKER_BUILDKIT

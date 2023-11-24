@@ -1,10 +1,11 @@
-FROM jgwill/ubuntu:latest
+FROM jgwill/ubuntu:20.04
 
 RUN apt update && \
  	apt upgrade -y && \
-	curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash - && \
+	apt install build-essential -y 
+
+RUN	curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash - && \
 	apt install -y nodejs && \
-	apt install build-essential -y && \
 	apt clean && \
 	rm -rf /var/lib/apt/lists/*
 
@@ -14,7 +15,7 @@ RUN apt update && \
 
 #RUN npm install -g npm
 #RUN npm i yarn --g
-RUN npm install npm yarn --g
+RUN npm install yarn --g
 #RUN yarn global add \
 #	node-gyp \
 #	http-server \
@@ -25,7 +26,7 @@ RUN npm install npm yarn --g
 #	--prefix /usr/local
 
 RUN npm i node-gyp --g
-RUN npm i yarn --g
+# RUN npm i yarn --g
 RUN npm i http-server --g
 RUN npm i tlid --g
 RUN npm i json2bash --g
